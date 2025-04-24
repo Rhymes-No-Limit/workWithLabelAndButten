@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var label: UILabel!
     @IBOutlet var button: UIButton!
     
@@ -17,12 +17,23 @@ class ViewController: UIViewController {
         button.setTitleColor(.blue, for: .normal)
         button.backgroundColor = .green
     }
-
-
+    
+    
     @IBAction func pressedButton(_ sender: UIButton) {
-        
-        label.isHidden = false
-        label.text = "Hello, world"
+        if label.isHidden {
+            label.isHidden = false
+            label.text = "Hello, world"
+            
+            button.setTitle("Clear", for: .normal)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = .red
+        } else {
+            label.isHidden = true
+            
+            button.setTitle("Get result", for: .normal)
+            button.setTitleColor(.blue, for: .normal)
+            button.backgroundColor = .green
+        }
     }
+    
 }
-
