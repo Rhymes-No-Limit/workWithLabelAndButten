@@ -23,22 +23,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W2-HB-SXS">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W2-HB-SXS">
                                 <rect key="frame" x="121" y="618" width="150" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="435-Uh-kk8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQB-Ez-auG">
+                                <rect key="frame" x="121.66666666666669" y="575" width="150" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Action 2"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ymy-fi-Tkx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP9-Hy-cyw">
+                                <rect key="frame" x="121.66666666666669" y="532" width="150" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Action 1"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yBT-cC-ij5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SQB-Ez-auG" firstAttribute="top" secondItem="CP9-Hy-cyw" secondAttribute="bottom" constant="8" symbolic="YES" id="1fU-Gw-k8Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0W2-HB-SXS" secondAttribute="bottom" constant="165" id="22X-Px-iBM"/>
+                            <constraint firstItem="CP9-Hy-cyw" firstAttribute="width" secondItem="SQB-Ez-auG" secondAttribute="width" id="8QT-dh-DiL"/>
+                            <constraint firstItem="0W2-HB-SXS" firstAttribute="top" secondItem="SQB-Ez-auG" secondAttribute="bottom" constant="8" symbolic="YES" id="Drj-om-FPw"/>
+                            <constraint firstItem="CP9-Hy-cyw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MQt-L0-hbe"/>
+                            <constraint firstItem="SQB-Ez-auG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="U4h-jB-z7J"/>
+                            <constraint firstItem="0W2-HB-SXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="V1h-9k-H86"/>
+                            <constraint firstItem="SQB-Ez-auG" firstAttribute="width" secondItem="0W2-HB-SXS" secondAttribute="width" id="bwh-YH-kdS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0W2-HB-SXS" secondAttribute="trailing" constant="122" id="gJH-TX-zta"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="0W2-HB-SXS" id="Crm-Zz-uVP"/>
                         <outlet property="label" destination="JoI-5Q-ZV0" id="dVR-uS-N8B"/>
+                        <outletCollection property="actionButtons" destination="CP9-Hy-cyw" collectionClass="NSMutableArray" id="Y4G-QZ-fsd"/>
+                        <outletCollection property="actionButtons" destination="SQB-Ez-auG" collectionClass="NSMutableArray" id="Ldn-Qf-50c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
